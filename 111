@@ -2,5 +2,12 @@ import cv2
 import numpy as np
  
  image=cv2.imread("coins.png")
- cv2.imshow("if imread successfully")
+ cv2.imshow("if imread successfully",image)
  cv2.waitkey(0)
+
+
+gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+blurred=cv2.GaussianBlur(gray,(11,11),0)
+cv2.imshow("blurred",blurred)
+cv2.waitKey(0)
+
